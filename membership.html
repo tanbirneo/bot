@@ -9,363 +9,304 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
-<body class="membership-page">
+<body>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Luminary</a>
       <div class="nav-links">
-        <a href="index.html" class="nav-link">Ebooks</a>
+        <a href="index.html" class="nav-link">Home</a>
         <a href="membership.html" class="nav-link active">Membership</a>
+        <a href="work-with-me.html" class="nav-link">Work With Me</a>
+        <a href="support.html" class="nav-link">Support</a>
       </div>
-      <a href="#join" class="nav-cta">Join</a>
-      <button class="nav-burger" id="navBurger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="#join" class="nav-cta">Join Membership</a>
+      <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-    <div class="nav-mobile" id="navMobile">
-      <a href="index.html">Ebooks</a>
+    <div class="nav-drawer" id="navDrawer">
+      <a href="index.html">Home</a>
       <a href="membership.html">Membership</a>
-      <a href="#join" class="nav-mobile-cta">Become A Member</a>
+      <a href="work-with-me.html">Work With Me</a>
+      <a href="support.html">Support</a>
+      <a href="#join" class="nav-drawer-cta">Become A Member</a>
     </div>
   </nav>
 
-  <!-- SECTION 1 — HERO -->
-  <section class="mem-hero" id="join">
+  <!-- S1 — HERO -->
+  <section class="mem-hero-section" id="join">
+    <div class="mem-hero-bg-word">MEMBER</div>
     <div class="mem-hero-inner">
-      <div class="mem-hero-text reveal">
-        <span class="section-label light">Exclusive Access</span>
-        <h1 class="mem-hero-heading">Join The<br /><em>Inner Circle</em></h1>
-        <p class="mem-hero-sub">Support the creator and access a growing library of premium content, ad-free videos, and exclusive resources.</p>
+      <div class="reveal-l">
+        <span class="eyebrow dim">Exclusive Access</span>
+        <h1 class="mem-hero-h1">Join The<br /><em>Inner Circle</em></h1>
+        <p class="mem-hero-p">Support the creator and unlock a growing library of premium content, ad-free videos, and exclusive resources — all in one place.</p>
       </div>
-      <div class="mem-hero-card reveal-up">
+      <div class="reveal-scale">
         <div class="pricing-card">
           <div class="pricing-card-bg"></div>
-          <div class="pricing-badge">Most Popular</div>
-          <div class="pricing-label">Inner Circle</div>
-          <div class="pricing-price">$9<span class="pricing-period">/month</span></div>
-          <div class="pricing-divider"></div>
-          <ul class="pricing-features">
-            <li>
-              <svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Ad-Free Videos
-            </li>
-            <li>
-              <svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Exclusive Content
-            </li>
-            <li>
-              <svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Early Access
-            </li>
-            <li>
-              <svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Premium Resources
-            </li>
-            <li>
-              <svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Cancel Anytime
-            </li>
-          </ul>
-          <a href="#" class="btn btn-gold pricing-btn">Become A Member</a>
-          <p class="pricing-note">No commitment. Cancel anytime.</p>
+          <div class="pricing-card-bar"></div>
+          <div class="pricing-card-body">
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-label">Inner Circle</div>
+            <div class="pricing-price">$9<span class="pricing-per">/month</span></div>
+            <div class="pricing-rule"></div>
+            <ul class="pricing-features">
+              <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Ad-Free Videos</li>
+              <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Exclusive Content</li>
+              <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Early Access</li>
+              <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Premium Resources</li>
+              <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Cancel Anytime</li>
+            </ul>
+            <a href="#" class="btn btn-gold pricing-cta-btn">Become A Member</a>
+            <p class="pricing-note">No commitment. Cancel anytime.</p>
+          </div>
           <div class="pricing-glow"></div>
         </div>
       </div>
     </div>
-    <div class="mem-hero-bg-text">MEMBER</div>
   </section>
 
-  <!-- SECTION 2 — BENEFITS -->
-  <section class="benefits">
-    <div class="benefits-inner">
-      <div class="section-header reveal">
-        <span class="section-label">What You Get</span>
-        <h2 class="section-title">Everything<br /><em>In One Place</em></h2>
+  <!-- S2 — BENEFITS -->
+  <section class="section-wrap divider-top" style="background:var(--bg)">
+    <div class="inner">
+      <div class="sec-head reveal">
+        <span class="eyebrow">What You Get</span>
+        <h2 class="display">Everything<br /><em>In One Place</em></h2>
       </div>
       <div class="benefits-grid">
         <div class="benefit-card reveal">
-          <div class="benefit-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="10"/><polygon points="10,8 16,12 10,16"/></svg>
-          </div>
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="10"/><polygon points="10,8 16,12 10,16"/></svg></div>
           <h3>Ad-Free Videos</h3>
-          <p>Watch without interruptions. Every video, uninterrupted, on your schedule.</p>
+          <p>Watch every video without interruptions. Clean, uninterrupted content on your schedule.</p>
         </div>
         <div class="benefit-card reveal">
-          <div class="benefit-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>Exclusive Videos</h3>
-          <p>Members-only content you won't find anywhere else.</p>
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Exclusive Content</h3>
+          <p>Members-only videos and resources you won't find anywhere else — made just for you.</p>
         </div>
         <div class="benefit-card reveal">
-          <div class="benefit-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
           <h3>Early Access</h3>
-          <p>Watch new releases before they go public. Stay ahead of the curve.</p>
+          <p>Watch new releases before they go public. Always be the first to see new content.</p>
         </div>
         <div class="benefit-card reveal">
-          <div class="benefit-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          </div>
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
           <h3>Premium Resources</h3>
-          <p>Bonus downloads, guides, and templates — practical tools for real work.</p>
+          <p>Bonus downloads, guides, and templates — practical tools built for real application.</p>
         </div>
         <div class="benefit-card reveal">
-          <div class="benefit-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
-          </div>
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div>
           <h3>Member Updates</h3>
-          <p>Behind-the-scenes insights, process updates, and creator notes.</p>
+          <p>Behind-the-scenes insights, process notes, and creator updates delivered to members.</p>
         </div>
-        <div class="benefit-card reveal benefit-card--gold">
-          <div class="benefit-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
+        <div class="benefit-card benefit-card--highlight reveal">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
           <h3>Support The Creator</h3>
-          <p>Directly fund future content and help build something meaningful.</p>
+          <p>Directly fund future content and help build something meaningful and independent.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 3 — CONTENT PREVIEW -->
-  <section class="preview-gallery">
-    <div class="preview-gallery-inner">
-      <div class="section-header reveal">
-        <span class="section-label">Member Vault</span>
-        <h2 class="section-title">Inside The Vault</h2>
+  <!-- S3 — CONTENT PREVIEW / VAULT -->
+  <section class="section-wrap divider-top" style="background:var(--bg2)">
+    <div class="inner">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Member Vault</span>
+        <h2 class="display">Inside The Vault</h2>
       </div>
-      <div class="preview-grid">
-        <div class="preview-item reveal preview-item--video">
-          <div class="preview-blur">
-            <div class="preview-content-inner">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              <span>Locked Video</span>
-            </div>
-            <div class="preview-label-tag">Members Only</div>
-          </div>
-          <div class="preview-overlay">
-            <span class="preview-type">Exclusive Video</span>
-            <span class="preview-title">Mastering Deep Work</span>
-          </div>
+      <div class="vault-grid">
+        <div class="vault-item vault-item--v1 reveal">
+          <div class="vault-item-bg"></div>
+          <div class="vault-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Locked Video</span></div>
+          <div class="vault-tag vault-tag--gold">Members Only</div>
+          <div class="vault-foot"><div class="vault-type">Exclusive Video</div><div class="vault-name">Mastering Deep Work</div></div>
         </div>
-        <div class="preview-item reveal preview-item--resource">
-          <div class="preview-blur">
-            <div class="preview-content-inner">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              <span>Locked Resource</span>
-            </div>
-            <div class="preview-label-tag">Members Only</div>
-          </div>
-          <div class="preview-overlay">
-            <span class="preview-type">Premium Resource</span>
-            <span class="preview-title">Clarity Workbook PDF</span>
-          </div>
+        <div class="vault-item vault-item--v2 reveal">
+          <div class="vault-item-bg"></div>
+          <div class="vault-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Locked Resource</span></div>
+          <div class="vault-tag vault-tag--gold">Members Only</div>
+          <div class="vault-foot"><div class="vault-type">Premium Resource</div><div class="vault-name">Clarity Workbook PDF</div></div>
         </div>
-        <div class="preview-item reveal preview-item--upcoming">
-          <div class="preview-blur">
-            <div class="preview-content-inner">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <span>Coming Soon</span>
-            </div>
-            <div class="preview-label-tag preview-label-tag--upcoming">Upcoming</div>
-          </div>
-          <div class="preview-overlay">
-            <span class="preview-type">Early Access</span>
-            <span class="preview-title">The Focus Series</span>
-          </div>
+        <div class="vault-item vault-item--v3 reveal">
+          <div class="vault-item-bg"></div>
+          <div class="vault-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Coming Soon</span></div>
+          <div class="vault-tag vault-tag--green">Upcoming</div>
+          <div class="vault-foot"><div class="vault-type">Early Access</div><div class="vault-name">The Focus Series</div></div>
         </div>
-        <div class="preview-item reveal preview-item--video">
-          <div class="preview-blur">
-            <div class="preview-content-inner">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              <span>Locked Video</span>
-            </div>
-            <div class="preview-label-tag">Members Only</div>
-          </div>
-          <div class="preview-overlay">
-            <span class="preview-type">Exclusive Video</span>
-            <span class="preview-title">Behind The Process</span>
-          </div>
+        <div class="vault-item vault-item--v4 reveal">
+          <div class="vault-item-bg"></div>
+          <div class="vault-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Locked Video</span></div>
+          <div class="vault-tag vault-tag--gold">Members Only</div>
+          <div class="vault-foot"><div class="vault-type">Exclusive Video</div><div class="vault-name">Behind The Process</div></div>
         </div>
       </div>
-      <div class="preview-cta reveal">
+      <div class="vault-unlock reveal">
         <p>Unlock the full vault with a membership.</p>
         <a href="#join" class="btn btn-gold">Become A Member</a>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 4 — FROM READER TO MEMBER -->
-  <section class="reader-to-member">
-    <div class="reader-to-member-inner">
-      <div class="rtm-text reveal">
-        <span class="section-label">Your Path</span>
-        <h2 class="section-title">Already Enjoying<br /><em>The Ebooks?</em></h2>
-        <p>Membership is designed for readers who want ongoing content and deeper learning — a natural next step.</p>
-        <a href="#join" class="btn btn-primary">Join Now</a>
+  <!-- S4 — READER TO MEMBER -->
+  <section class="section-wrap divider-top" style="background:var(--bg)">
+    <div class="rtm-inner">
+      <div class="rtm-text reveal-l">
+        <span class="eyebrow">Your Path</span>
+        <h2>Already Enjoying<br /><em>The Ebooks?</em></h2>
+        <p>Many readers upgrade to membership for ongoing learning and exclusive content — it's the natural next step in your journey.</p>
+        <a href="#join" class="btn btn-white">Join Now</a>
       </div>
-      <div class="rtm-timeline reveal-right">
+      <div class="rtm-flow reveal-r">
         <div class="rtm-step">
-          <div class="rtm-step-dot"></div>
-          <div class="rtm-step-content">
-            <span class="rtm-step-num">01</span>
-            <span class="rtm-step-label">Read An Ebook</span>
-          </div>
+          <div class="rtm-step-left"><div class="rtm-dot"></div><div class="rtm-vert-line"></div></div>
+          <div><div class="rtm-step-num">01</div><div class="rtm-step-label">Read An Ebook</div></div>
         </div>
-        <div class="rtm-line"></div>
         <div class="rtm-step">
-          <div class="rtm-step-dot"></div>
-          <div class="rtm-step-content">
-            <span class="rtm-step-num">02</span>
-            <span class="rtm-step-label">Explore More</span>
-          </div>
+          <div class="rtm-step-left"><div class="rtm-dot"></div><div class="rtm-vert-line"></div></div>
+          <div><div class="rtm-step-num">02</div><div class="rtm-step-label">Explore More</div></div>
         </div>
-        <div class="rtm-line"></div>
         <div class="rtm-step">
-          <div class="rtm-step-dot"></div>
-          <div class="rtm-step-content">
-            <span class="rtm-step-num">03</span>
-            <span class="rtm-step-label">Join Membership</span>
-          </div>
+          <div class="rtm-step-left"><div class="rtm-dot"></div><div class="rtm-vert-line"></div></div>
+          <div><div class="rtm-step-num">03</div><div class="rtm-step-label">Join Membership</div></div>
         </div>
-        <div class="rtm-line"></div>
         <div class="rtm-step rtm-step--final">
-          <div class="rtm-step-dot rtm-step-dot--gold"></div>
-          <div class="rtm-step-content">
-            <span class="rtm-step-num">04</span>
-            <span class="rtm-step-label">Access Everything</span>
-          </div>
+          <div class="rtm-step-left"><div class="rtm-dot rtm-dot--gold"></div><div class="rtm-vert-line"></div></div>
+          <div><div class="rtm-step-num">04</div><div class="rtm-step-label">Unlock Everything</div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 5 — HOW IT WORKS -->
-  <section class="how-it-works">
-    <div class="how-it-works-inner">
-      <div class="section-header reveal">
-        <span class="section-label">Simple Process</span>
-        <h2 class="section-title">How It Works</h2>
+  <!-- S5 — HOW IT WORKS -->
+  <section class="section-wrap divider-top" style="background:var(--bg2)">
+    <div class="inner">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Simple Process</span>
+        <h2 class="display">How It Works</h2>
       </div>
       <div class="hiw-steps">
         <div class="hiw-step reveal">
           <div class="hiw-num">01</div>
-          <div class="hiw-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
+          <div class="hiw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
           <h3>Join</h3>
-          <p>Sign up in seconds. No long forms.</p>
+          <p>Sign up in seconds.</p>
         </div>
-        <div class="hiw-connector reveal"></div>
+        <div class="hiw-conn reveal"></div>
         <div class="hiw-step reveal">
           <div class="hiw-num">02</div>
-          <div class="hiw-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          </div>
-          <h3>Unlock</h3>
-          <p>Instantly access the full member vault.</p>
+          <div class="hiw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <h3>Unlock Library</h3>
+          <p>Access the full vault.</p>
         </div>
-        <div class="hiw-connector reveal"></div>
+        <div class="hiw-conn reveal"></div>
         <div class="hiw-step reveal">
           <div class="hiw-num">03</div>
-          <div class="hiw-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polygon points="5,3 19,12 5,21"/></svg>
-          </div>
-          <h3>Watch</h3>
-          <p>Stream ad-free on any device.</p>
+          <div class="hiw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <h3>Watch Ad-Free</h3>
+          <p>Stream on any device.</p>
         </div>
-        <div class="hiw-connector reveal"></div>
+        <div class="hiw-conn reveal"></div>
         <div class="hiw-step reveal">
           <div class="hiw-num">04</div>
-          <div class="hiw-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
-          </div>
-          <h3>Enjoy</h3>
-          <p>Grow with every release, every month.</p>
+          <div class="hiw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+          <h3>Access New Content</h3>
+          <p>Grow with each release.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 6 — FAQ -->
-  <section class="faq">
-    <div class="faq-inner">
-      <div class="section-header reveal">
-        <span class="section-label">Questions</span>
-        <h2 class="section-title">Frequently Asked</h2>
+  <!-- S6 — FAQ -->
+  <section class="section-wrap divider-top" style="background:var(--bg)">
+    <div class="inner-sm">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Questions</span>
+        <h2 class="display">Frequently Asked</h2>
       </div>
       <div class="faq-list">
         <div class="faq-item reveal">
-          <button class="faq-question" aria-expanded="false">
-            Can I cancel anytime?
-            <svg class="faq-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Yes. Cancel at any time from your account settings. No questions asked, no hoops to jump through.</p>
-          </div>
+          <button class="faq-q" aria-expanded="false">Can I cancel anytime?<svg class="faq-arr" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-a"><p>Yes. Cancel at any time from your account settings — no questions asked, no hoops to jump through.</p></div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-question" aria-expanded="false">
-            Will I lose access immediately after cancelling?
-            <svg class="faq-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>No. You retain full access until the end of your current billing period. We never cut you off mid-cycle.</p>
-          </div>
+          <button class="faq-q" aria-expanded="false">Do I lose access immediately after cancelling?<svg class="faq-arr" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-a"><p>No. You retain full access until the end of your current billing period. We never cut you off mid-cycle.</p></div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-question" aria-expanded="false">
-            How often is new content added?
-            <svg class="faq-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Regularly — new videos, resources, and exclusive content are added on an ongoing basis. Members are notified with every release.</p>
-          </div>
+          <button class="faq-q" aria-expanded="false">How often is content added?<svg class="faq-arr" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-a"><p>Regularly. New videos, resources, and exclusive content are added on an ongoing basis — members are notified with every release.</p></div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-question" aria-expanded="false">
-            Is this different from buying an ebook?
-            <svg class="faq-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Yes. Ebooks are one-time purchases. Membership gives you ongoing access to video content, exclusive resources, and new releases — a continuously growing library.</p>
-          </div>
+          <button class="faq-q" aria-expanded="false">What do members get exactly?<svg class="faq-arr" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-a"><p>Exclusive ad-free videos, premium downloadable resources, early access to new releases, and behind-the-scenes member updates.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 7 — FINAL CTA -->
-  <section class="mem-final-cta">
-    <div class="mem-final-cta-inner reveal">
-      <span class="section-label light">Ready?</span>
-      <h2 class="mem-final-cta-heading">Support What<br /><em>You Enjoy</em></h2>
-      <p>Unlock premium content and enjoy an ad-free experience — starting today.</p>
-      <a href="#join" class="btn btn-gold btn-lg">Become A Member</a>
+  <!-- S7 — SUPPORT -->
+  <section class="section-wrap divider-top" style="background:var(--bg2)">
+    <div class="inner">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Help Center</span>
+        <h2 class="display">Need Assistance?</h2>
+      </div>
+      <div class="support-block reveal">
+        <h3>We're Here To Help</h3>
+        <p>For billing, access, or membership help, contact support and we'll get back to you quickly.</p>
+        <div class="support-block-meta">
+          <div class="support-block-row"><strong>Email:</strong> <a href="mailto:support@yourwebsite.com">support@yourwebsite.com</a></div>
+          <div class="support-block-row"><strong>Response Time:</strong> 24–48 hours</div>
+        </div>
+        <a href="support.html" class="btn btn-outline">Contact Support</a>
+      </div>
     </div>
-    <div class="mem-cta-bg-orb"></div>
   </section>
 
-  <!-- SECTION 8 — FOOTER -->
+  <!-- S8 — FINAL CTA -->
+  <section class="mem-final-section section-wrap">
+    <div class="mem-final-orb"></div>
+    <div class="inner-xs reveal" style="text-align:center;position:relative;">
+      <span class="eyebrow dim">Ready?</span>
+      <h2 class="mem-final-h2">Support What<br /><em>You Love</em></h2>
+      <p class="mem-final-p">Unlock premium content and enjoy an ad-free experience — starting today.</p>
+      <a href="#join" class="btn btn-gold btn-lg">Become A Member</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
         <a href="index.html" class="footer-logo">Luminary</a>
-        <p>Premium knowledge for curious minds.</p>
+        <p>Premium knowledge and resources for curious, ambitious minds.</p>
       </div>
-      <nav class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="membership.html">Membership</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </nav>
-      <div class="footer-copy">© 2026 Luminary. All rights reserved.</div>
+      <div class="footer-right">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="membership.html">Membership</a>
+          <a href="work-with-me.html">Work With Me</a>
+          <a href="support.html">Support</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Refund Policy</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:support@yourwebsite.com">support@yourwebsite.com</a>
+          <a href="mailto:business@yourwebsite.com">business@yourwebsite.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom" style="padding-left:clamp(1.5rem,5vw,4rem);padding-right:clamp(1.5rem,5vw,4rem)">
+      <span>© 2026 Luminary. All rights reserved.</span>
+      <span>Premium Digital Publishing</span>
     </div>
   </footer>
 

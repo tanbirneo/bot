@@ -1,180 +1,166 @@
 /* =========================================
-   LUMINARY — Main JS
+   LUMINARY — Main JS v2
    ========================================= */
 
-// NAV scroll effect
+// Nav scroll
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 20);
-}, { passive: true });
+if (nav) {
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+}
 
-// Mobile nav burger
+// Mobile nav
 const burger = document.getElementById('navBurger');
-const mobileNav = document.getElementById('navMobile');
-if (burger && mobileNav) {
+const drawer = document.getElementById('navDrawer');
+if (burger && drawer) {
   burger.addEventListener('click', () => {
     const open = burger.classList.toggle('open');
-    mobileNav.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
   });
-  // close on link click
-  mobileNav.querySelectorAll('a').forEach(a => {
+  drawer.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
       burger.classList.remove('open');
-      mobileNav.classList.remove('open');
+      drawer.classList.remove('open');
     });
   });
 }
 
-// Reveal on scroll (IntersectionObserver)
-const revealEls = document.querySelectorAll('.reveal, .reveal-right, .reveal-up');
+// Reveal on scroll
+const revealEls = document.querySelectorAll('.reveal, .reveal-r, .reveal-l, .reveal-scale');
 const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      // stagger siblings in grid parents
-      const siblings = entry.target.parentElement
-        ? [...entry.target.parentElement.children].filter(c => c.classList.contains('reveal') || c.classList.contains('reveal-right') || c.classList.contains('reveal-up'))
-        : [];
-      const idx = siblings.indexOf(entry.target);
-      const delay = idx >= 0 ? idx * 80 : 0;
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, delay);
-      revealObs.unobserve(entry.target);
-    }
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const siblings = [...(el.parentElement?.children || [])].filter(c =>
+      c.classList.contains('reveal') || c.classList.contains('reveal-r') ||
+      c.classList.contains('reveal-l') || c.classList.contains('reveal-scale')
+    );
+    const idx = siblings.indexOf(el);
+    const delay = Math.min(idx * 90, 400);
+    setTimeout(() => el.classList.add('visible'), delay);
+    revealObs.unobserve(el);
   });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
 revealEls.forEach(el => revealObs.observe(el));
 
-// Ebook showcase
+// Ebook showcase slider
 const ebookSlides = document.querySelectorAll('.ebook-slide');
-const ebookNavBtns = document.querySelectorAll('.ebook-nav-btn');
-const progressBar = document.getElementById('ebookProgress');
+const ebookTabs = document.querySelectorAll('.ebook-tab');
+const ebookFill = document.getElementById('ebookFill');
 let currentEbook = 0;
-let ebookInterval = null;
+let ebookTimer = null;
 
 function goToEbook(idx) {
-  if (idx === currentEbook) return;
-
-  const prev = ebookSlides[currentEbook];
-  prev.classList.remove('active');
-  prev.classList.add('exit');
-  setTimeout(() => prev.classList.remove('exit'), 600);
-
+  if (idx === currentEbook || !ebookSlides.length) return;
+  ebookSlides[currentEbook].classList.remove('active');
+  ebookSlides[currentEbook].classList.add('exiting');
+  setTimeout(() => ebookSlides[currentEbook - (idx > currentEbook ? 1 : -1) + (idx > currentEbook ? 0 : 0)]?.classList.remove('exiting'), 600);
+  const prevIdx = currentEbook;
   currentEbook = idx;
+  setTimeout(() => ebookSlides[prevIdx].classList.remove('exiting'), 600);
   ebookSlides[currentEbook].classList.add('active');
-
-  ebookNavBtns.forEach((btn, i) => btn.classList.toggle('active', i === currentEbook));
-
-  if (progressBar) {
-    const pct = ((currentEbook + 1) / ebookSlides.length) * 100;
-    progressBar.style.width = pct + '%';
-  }
+  ebookTabs.forEach((t, i) => t.classList.toggle('active', i === currentEbook));
+  if (ebookFill) ebookFill.style.width = ((currentEbook + 1) / ebookSlides.length * 100) + '%';
 }
 
-function startEbookAutoplay() {
-  ebookInterval = setInterval(() => {
-    goToEbook((currentEbook + 1) % ebookSlides.length);
-  }, 5000);
+function resetEbookTimer() {
+  clearInterval(ebookTimer);
+  ebookTimer = setInterval(() => goToEbook((currentEbook + 1) % ebookSlides.length), 5500);
 }
 
-function resetEbookAutoplay() {
-  clearInterval(ebookInterval);
-  startEbookAutoplay();
-}
-
-ebookNavBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    goToEbook(parseInt(btn.dataset.index, 10));
-    resetEbookAutoplay();
+if (ebookSlides.length) {
+  ebookTabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      goToEbook(parseInt(btn.dataset.idx, 10));
+      resetEbookTimer();
+    });
   });
-});
-
-if (ebookSlides.length > 0) {
-  if (progressBar) progressBar.style.width = '33.33%';
-  startEbookAutoplay();
+  resetEbookTimer();
 }
 
 // Animated counters
-const trustStats = document.querySelectorAll('.trust-stat');
-let countersStarted = false;
+const counterEls = document.querySelectorAll('.trust-num[data-target]');
+let countersRun = false;
 
-function animateCounter(el) {
-  const numEl = el.querySelector('.trust-number');
-  if (!numEl) return;
-  const target = parseInt(numEl.dataset.target, 10);
-  const suffix = numEl.dataset.suffix || '';
-  const duration = 1800;
-  const start = performance.now();
-
-  function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
-
-  function tick(now) {
-    const elapsed = now - start;
-    const progress = Math.min(elapsed / duration, 1);
-    const value = Math.floor(easeOut(progress) * target);
-    numEl.textContent = value.toLocaleString() + suffix;
-    if (progress < 1) requestAnimationFrame(tick);
-    else numEl.textContent = target.toLocaleString() + suffix;
-  }
-  requestAnimationFrame(tick);
+function runCounters() {
+  counterEls.forEach(el => {
+    const target = parseInt(el.dataset.target, 10);
+    const suffix = el.dataset.suffix || '';
+    const dur = 1800;
+    const start = performance.now();
+    const easeOut = t => 1 - Math.pow(1 - t, 3);
+    const tick = now => {
+      const p = Math.min((now - start) / dur, 1);
+      el.textContent = Math.floor(easeOut(p) * target).toLocaleString() + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+      else el.textContent = target.toLocaleString() + suffix;
+    };
+    requestAnimationFrame(tick);
+  });
 }
 
-const counterObs = new IntersectionObserver((entries) => {
-  if (countersStarted) return;
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      countersStarted = true;
-      trustStats.forEach(stat => animateCounter(stat));
-      counterObs.disconnect();
+if (counterEls.length) {
+  const cObs = new IntersectionObserver(entries => {
+    if (countersRun) return;
+    if (entries.some(e => e.isIntersecting)) {
+      countersRun = true;
+      runCounters();
+      cObs.disconnect();
     }
-  });
-}, { threshold: 0.3 });
-
-if (trustStats.length > 0) counterObs.observe(trustStats[0]);
+  }, { threshold: 0.3 });
+  cObs.observe(counterEls[0].closest('.trust-grid') || counterEls[0]);
+}
 
 // FAQ accordion
-const faqItems = document.querySelectorAll('.faq-item');
-faqItems.forEach(item => {
-  const btn = item.querySelector('.faq-question');
-  const answer = item.querySelector('.faq-answer');
-  if (!btn || !answer) return;
-
+document.querySelectorAll('.faq-item').forEach(item => {
+  const btn = item.querySelector('.faq-q');
+  const ans = item.querySelector('.faq-a');
+  if (!btn || !ans) return;
   btn.addEventListener('click', () => {
     const isOpen = btn.getAttribute('aria-expanded') === 'true';
-
-    // close all
-    faqItems.forEach(fi => {
-      fi.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-      fi.querySelector('.faq-answer').classList.remove('open');
+    document.querySelectorAll('.faq-q[aria-expanded="true"]').forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+      b.nextElementSibling?.classList.remove('open');
     });
-
     if (!isOpen) {
       btn.setAttribute('aria-expanded', 'true');
-      answer.classList.add('open');
+      ans.classList.add('open');
     }
   });
 });
 
-// Smooth anchor scroll for in-page links
+// Smooth anchor scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   });
 });
 
-// Cursor-relative sheen on pricing / member cards
-const cards = document.querySelectorAll('.pricing-card, .member-card');
-cards.forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const rect = card.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    card.style.setProperty('--mx', x + '%');
-    card.style.setProperty('--my', y + '%');
-  });
-});
+// Form handler (frontend only — shows success message)
+function handleForm(e) {
+  e.preventDefault();
+  const form = e.target;
+  const msgId = form.id === 'contactForm' ? 'formMsg' : 'supportMsg';
+  const msg = document.getElementById(msgId);
+  if (msg) {
+    msg.style.display = 'block';
+    form.querySelectorAll('input, textarea').forEach(f => f.value = '');
+    setTimeout(() => { msg.style.display = 'none'; }, 5000);
+  }
+}
+window.handleForm = handleForm;
+
+// Parallax glow orbs (subtle)
+const orbs = document.querySelectorAll('.mem-preview-orb, .final-cta-orb, .mem-final-orb');
+if (orbs.length && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+  window.addEventListener('mousemove', e => {
+    const mx = (e.clientX / window.innerWidth - 0.5) * 30;
+    const my = (e.clientY / window.innerHeight - 0.5) * 30;
+    orbs.forEach(orb => {
+      orb.style.transform = `translate(calc(-50% + ${mx}px), calc(-50% + ${my}px))`;
+    });
+  }, { passive: true });
+}

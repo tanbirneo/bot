@@ -9,374 +9,445 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
-<body class="home-page">
+<body>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Luminary</a>
       <div class="nav-links">
-        <a href="index.html" class="nav-link active">Ebooks</a>
+        <a href="index.html" class="nav-link active">Home</a>
         <a href="membership.html" class="nav-link">Membership</a>
+        <a href="work-with-me.html" class="nav-link">Work With Me</a>
+        <a href="support.html" class="nav-link">Support</a>
       </div>
-      <a href="membership.html" class="nav-cta">Join</a>
-      <button class="nav-burger" id="navBurger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="membership.html" class="nav-cta">Join Membership</a>
+      <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-    <div class="nav-mobile" id="navMobile">
-      <a href="index.html">Ebooks</a>
+    <div class="nav-drawer" id="navDrawer">
+      <a href="index.html">Home</a>
       <a href="membership.html">Membership</a>
-      <a href="membership.html" class="nav-mobile-cta">Join Membership</a>
+      <a href="work-with-me.html">Work With Me</a>
+      <a href="support.html">Support</a>
+      <a href="membership.html" class="nav-drawer-cta">Join Membership</a>
     </div>
   </nav>
 
-  <!-- SECTION 1 — HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <span class="hero-label reveal">Premium Ebook Collection</span>
-        <h1 class="hero-heading reveal">Knowledge<br /><em>Worth Keeping</em></h1>
-        <p class="hero-sub reveal">Carefully crafted ebooks designed to help you learn, think deeper, and grow.</p>
+  <!-- S1 — HERO -->
+  <section class="hero-home">
+    <div class="hero-home-inner">
+      <div>
+        <div class="hero-eyebrow reveal">Premium Ebook Collection</div>
+        <h1 class="reveal">Knowledge That<br /><em>Stays With You</em></h1>
+        <p class="reveal">Simple, powerful ebooks designed to help you learn, grow, and think deeper.</p>
         <div class="hero-actions reveal">
-          <a href="#ebooks" class="btn btn-primary">Browse Ebooks</a>
-          <a href="membership.html" class="btn btn-ghost">Join Membership</a>
+          <a href="#ebooks" class="btn btn-white">Browse Ebooks</a>
+          <a href="membership.html" class="btn btn-outline">Join Membership</a>
         </div>
       </div>
-      <div class="hero-visual reveal-right">
-        <div class="hero-book-stage">
-          <div class="hero-book">
-            <div class="hero-book-spine"></div>
-            <div class="hero-book-cover">
-              <div class="hero-book-cover-inner">
-                <span class="hero-book-tag">Featured</span>
-                <div class="hero-book-title">The Art of<br />Clear Thinking</div>
-                <div class="hero-book-sub">Ebook One</div>
-                <div class="hero-book-pages">240 pages</div>
-              </div>
-              <div class="hero-book-sheen"></div>
+      <div class="book-stage reveal-r">
+        <div class="book-3d">
+          <div class="book-spine"></div>
+          <div class="book-cover">
+            <div class="book-inner">
+              <span class="book-badge">Featured</span>
+              <div class="book-deco"></div>
+              <div class="book-title-text">The Art of Clear Thinking</div>
+              <div class="book-author">Luminary</div>
             </div>
+            <div class="book-sheen"></div>
           </div>
-          <div class="hero-book-shadow"></div>
-          <div class="hero-glow"></div>
         </div>
+        <div class="book-shadow"></div>
+        <div class="book-glow"></div>
       </div>
     </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="hero-scroll-line"></div>
-    </div>
+    <div class="scroll-cue"><span>Scroll</span><div class="scroll-cue-line"></div></div>
   </section>
 
-  <!-- SECTION 2 — EBOOK SHOWCASE -->
-  <section class="ebooks" id="ebooks">
-    <div class="ebooks-inner">
-      <div class="section-header reveal">
-        <span class="section-label">The Collection</span>
-        <h2 class="section-title">Curated Reads</h2>
+  <!-- S2 — EBOOK SHOWCASE -->
+  <section class="ebook-section section-wrap divider-top" id="ebooks">
+    <div class="inner">
+      <div class="sec-head reveal">
+        <span class="eyebrow">The Collection</span>
+        <h2 class="display">Featured Reads</h2>
       </div>
-
-      <div class="ebook-showcase">
-        <div class="ebook-nav">
-          <button class="ebook-nav-btn active" data-index="0">01</button>
-          <button class="ebook-nav-btn" data-index="1">02</button>
-          <button class="ebook-nav-btn" data-index="2">03</button>
+      <div class="ebook-slider-wrap">
+        <div class="ebook-tabs">
+          <button class="ebook-tab active" data-idx="0">01</button>
+          <button class="ebook-tab" data-idx="1">02</button>
+          <button class="ebook-tab" data-idx="2">03</button>
         </div>
-
-        <div class="ebook-stage">
-          <!-- Book 1 -->
-          <div class="ebook-slide active" data-index="0">
-            <div class="ebook-visual">
-              <div class="ebook-cover ebook-cover--one">
-                <div class="ebook-cover-content">
-                  <div class="ebook-cover-number">I</div>
-                  <div class="ebook-cover-title">The Art of Clear Thinking</div>
-                  <div class="ebook-cover-line"></div>
-                  <div class="ebook-cover-author">Luminary</div>
+        <div class="ebook-slides">
+          <!-- Ebook 1 -->
+          <div class="ebook-slide active" data-idx="0">
+            <div class="ebook-book-wrap">
+              <div class="ebook-book ebook-book--one">
+                <div class="ebook-book-inner">
+                  <div class="ebook-book-roman">I</div>
+                  <div class="ebook-book-name">The Art of Clear Thinking</div>
+                  <div class="ebook-book-rule"></div>
+                  <div class="ebook-book-by">Luminary</div>
                 </div>
-                <div class="ebook-cover-sheen"></div>
+                <div class="ebook-book-sheen"></div>
               </div>
-              <div class="ebook-book-shadow"></div>
+              <div class="ebook-shadow-el"></div>
             </div>
-            <div class="ebook-details">
-              <span class="ebook-number">01 / 03</span>
-              <h3 class="ebook-title">The Art of Clear Thinking</h3>
-              <p class="ebook-desc">A precise guide to cutting through noise, building mental models, and making decisions with confidence.</p>
+            <div class="ebook-info">
+              <span class="ebook-num">01 / 03</span>
+              <h3 class="ebook-title-large">The Art of Clear Thinking</h3>
+              <p class="ebook-desc">A precise guide to cutting through noise, building mental models, and making decisions with lasting confidence.</p>
               <div class="ebook-meta">
                 <span class="ebook-pages">
                   <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="1" width="10" height="14" rx="1" stroke="currentColor" stroke-width="1.2"/><line x1="5" y1="5" x2="9" y2="5" stroke="currentColor" stroke-width="1.2"/><line x1="5" y1="8" x2="9" y2="8" stroke="currentColor" stroke-width="1.2"/></svg>
                   240 pages
                 </span>
               </div>
-              <a href="#" class="btn btn-primary ebook-buy">Buy Now</a>
+              <a href="#" class="btn btn-white" style="align-self:flex-start">Buy Now</a>
             </div>
           </div>
-
-          <!-- Book 2 -->
-          <div class="ebook-slide" data-index="1">
-            <div class="ebook-visual">
-              <div class="ebook-cover ebook-cover--two">
-                <div class="ebook-cover-content">
-                  <div class="ebook-cover-number">II</div>
-                  <div class="ebook-cover-title">Deep Work Rituals</div>
-                  <div class="ebook-cover-line"></div>
-                  <div class="ebook-cover-author">Luminary</div>
+          <!-- Ebook 2 -->
+          <div class="ebook-slide" data-idx="1">
+            <div class="ebook-book-wrap">
+              <div class="ebook-book ebook-book--two">
+                <div class="ebook-book-inner">
+                  <div class="ebook-book-roman">II</div>
+                  <div class="ebook-book-name">Deep Work Rituals</div>
+                  <div class="ebook-book-rule"></div>
+                  <div class="ebook-book-by">Luminary</div>
                 </div>
-                <div class="ebook-cover-sheen"></div>
+                <div class="ebook-book-sheen"></div>
               </div>
-              <div class="ebook-book-shadow"></div>
+              <div class="ebook-shadow-el"></div>
             </div>
-            <div class="ebook-details">
-              <span class="ebook-number">02 / 03</span>
-              <h3 class="ebook-title">Deep Work Rituals</h3>
-              <p class="ebook-desc">Practical systems for cultivating focus, protecting creative energy, and doing your most important work.</p>
+            <div class="ebook-info">
+              <span class="ebook-num">02 / 03</span>
+              <h3 class="ebook-title-large">Deep Work Rituals</h3>
+              <p class="ebook-desc">Practical systems for cultivating focus, protecting creative energy, and doing your most important work every day.</p>
               <div class="ebook-meta">
                 <span class="ebook-pages">
                   <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="1" width="10" height="14" rx="1" stroke="currentColor" stroke-width="1.2"/><line x1="5" y1="5" x2="9" y2="5" stroke="currentColor" stroke-width="1.2"/><line x1="5" y1="8" x2="9" y2="8" stroke="currentColor" stroke-width="1.2"/></svg>
                   198 pages
                 </span>
               </div>
-              <a href="#" class="btn btn-primary ebook-buy">Buy Now</a>
+              <a href="#" class="btn btn-white" style="align-self:flex-start">Buy Now</a>
             </div>
           </div>
-
-          <!-- Book 3 -->
-          <div class="ebook-slide" data-index="2">
-            <div class="ebook-visual">
-              <div class="ebook-cover ebook-cover--three">
-                <div class="ebook-cover-content">
-                  <div class="ebook-cover-number">III</div>
-                  <div class="ebook-cover-title">The Quiet Edge</div>
-                  <div class="ebook-cover-line"></div>
-                  <div class="ebook-cover-author">Luminary</div>
+          <!-- Ebook 3 -->
+          <div class="ebook-slide" data-idx="2">
+            <div class="ebook-book-wrap">
+              <div class="ebook-book ebook-book--three">
+                <div class="ebook-book-inner">
+                  <div class="ebook-book-roman">III</div>
+                  <div class="ebook-book-name">The Quiet Edge</div>
+                  <div class="ebook-book-rule"></div>
+                  <div class="ebook-book-by">Luminary</div>
                 </div>
-                <div class="ebook-cover-sheen"></div>
+                <div class="ebook-book-sheen"></div>
               </div>
-              <div class="ebook-book-shadow"></div>
+              <div class="ebook-shadow-el"></div>
             </div>
-            <div class="ebook-details">
-              <span class="ebook-number">03 / 03</span>
-              <h3 class="ebook-title">The Quiet Edge</h3>
-              <p class="ebook-desc">How consistent, deliberate habits compound into extraordinary results over time — without burning out.</p>
+            <div class="ebook-info">
+              <span class="ebook-num">03 / 03</span>
+              <h3 class="ebook-title-large">The Quiet Edge</h3>
+              <p class="ebook-desc">How consistent, deliberate habits compound into extraordinary results over time — without burning out or losing direction.</p>
               <div class="ebook-meta">
                 <span class="ebook-pages">
                   <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="1" width="10" height="14" rx="1" stroke="currentColor" stroke-width="1.2"/><line x1="5" y1="5" x2="9" y2="5" stroke="currentColor" stroke-width="1.2"/><line x1="5" y1="8" x2="9" y2="8" stroke="currentColor" stroke-width="1.2"/></svg>
                   214 pages
                 </span>
               </div>
-              <a href="#" class="btn btn-primary ebook-buy">Buy Now</a>
+              <a href="#" class="btn btn-white" style="align-self:flex-start">Buy Now</a>
             </div>
           </div>
         </div>
-
-        <div class="ebook-progress">
-          <div class="ebook-progress-bar" id="ebookProgress"></div>
-        </div>
+        <div class="ebook-progress-bar-wrap"><div class="ebook-progress-fill" id="ebookFill" style="width:33.33%"></div></div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 3 — WHY READ -->
-  <section class="why">
-    <div class="why-inner">
-      <div class="section-header reveal">
-        <span class="section-label">Why Read</span>
-        <h2 class="section-title">Built For<br /><em>Curious Minds</em></h2>
+  <!-- S3 — WHY READ -->
+  <section class="section-wrap" style="background:var(--bg)">
+    <div class="inner">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Why Read</span>
+        <h2 class="display">Designed For<br /><em>Deep Learners</em></h2>
       </div>
       <div class="why-grid">
         <div class="why-card reveal">
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-          </div>
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
           <h3>Clear Ideas</h3>
-          <p>No filler. Every page earns its place with sharp insights and precise language.</p>
+          <p>No filler. Every page earns its place with sharp insights and precise language crafted for clarity.</p>
         </div>
         <div class="why-card reveal">
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-          </div>
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
           <h3>Practical Knowledge</h3>
-          <p>Frameworks and systems you can apply immediately — not abstract theory.</p>
+          <p>Frameworks and systems you can apply immediately — not abstract theory that sits on the shelf.</p>
         </div>
         <div class="why-card reveal">
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
           <h3>Lifetime Access</h3>
-          <p>Purchase once, own forever. Updates included at no extra charge.</p>
+          <p>Purchase once, own forever. Receive free updates and improvements whenever they're released.</p>
         </div>
         <div class="why-card reveal">
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg>
-          </div>
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg></div>
           <h3>Read Anywhere</h3>
-          <p>PDF and EPUB formats work seamlessly on every device you own.</p>
+          <p>PDF and EPUB formats. Works on Kindle, iPad, desktop, or any device you prefer to read on.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 4 — MEMBERSHIP PREVIEW -->
-  <section class="membership-preview">
-    <div class="membership-preview-inner">
-      <div class="membership-preview-content reveal">
-        <span class="section-label light">Premium Access</span>
-        <h2 class="membership-preview-heading">Want More?</h2>
-        <p class="membership-preview-sub">Unlock ad-free videos, exclusive content, and premium resources curated for serious learners.</p>
-        <ul class="membership-benefits-list">
-          <li>
-            <span class="benefit-icon">
-              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="8"/><line x1="7" y1="10" x2="13" y2="10" stroke-width="1.5" stroke-linecap="round"/><line x1="10" y1="7" x2="10" y2="13" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </span>
-            Ad-Free Videos
-          </li>
-          <li>
-            <span class="benefit-icon">
-              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="8"/><line x1="7" y1="10" x2="13" y2="10" stroke-width="1.5" stroke-linecap="round"/><line x1="10" y1="7" x2="10" y2="13" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </span>
-            Exclusive Releases
-          </li>
-          <li>
-            <span class="benefit-icon">
-              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="8"/><line x1="7" y1="10" x2="13" y2="10" stroke-width="1.5" stroke-linecap="round"/><line x1="10" y1="7" x2="10" y2="13" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </span>
-            Early Access
-          </li>
-          <li>
-            <span class="benefit-icon">
-              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="8"/><line x1="7" y1="10" x2="13" y2="10" stroke-width="1.5" stroke-linecap="round"/><line x1="10" y1="7" x2="10" y2="13" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </span>
-            Premium Resources
-          </li>
+  <!-- S4 — MEMBERSHIP PREVIEW -->
+  <section class="mem-preview-section section-wrap">
+    <div class="mem-preview-orb"></div>
+    <div class="mem-preview-inner">
+      <div class="reveal-l">
+        <span class="eyebrow dim">Premium Access</span>
+        <h2 class="mem-preview-h2">Go Beyond<br /><em>Ebooks</em></h2>
+        <p class="mem-preview-p">Membership gives you ad-free videos, exclusive content, early access to new releases, and premium downloadable resources.</p>
+        <ul class="mem-benefit-list">
+          <li><span class="mem-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Ad-Free Videos</li>
+          <li><span class="mem-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Exclusive Content</li>
+          <li><span class="mem-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Early Access</li>
+          <li><span class="mem-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Premium Resources</li>
         </ul>
         <a href="membership.html" class="btn btn-gold">Explore Membership</a>
       </div>
-      <div class="membership-preview-visual reveal-right">
-        <div class="membership-card-display">
-          <div class="member-card">
-            <div class="member-card-bg"></div>
-            <div class="member-card-content">
-              <div class="member-card-label">Inner Circle</div>
-              <div class="member-card-price">$9<span>/mo</span></div>
-              <div class="member-card-divider"></div>
-              <ul class="member-card-perks">
-                <li>Ad-Free Videos</li>
-                <li>Exclusive Content</li>
-                <li>Early Access</li>
-                <li>Premium Resources</li>
-              </ul>
-            </div>
-            <div class="member-card-glow"></div>
+      <div class="mem-card-wrap reveal-r">
+        <div class="mem-card">
+          <div class="mem-card-bg"></div>
+          <div class="mem-card-top"></div>
+          <div class="mem-card-body">
+            <div class="mem-card-label">Inner Circle</div>
+            <div class="mem-card-price">$9<span class="mem-card-period">/mo</span></div>
+            <div class="mem-card-rule"></div>
+            <ul class="mem-card-perks">
+              <li>Ad-Free Videos</li>
+              <li>Exclusive Content</li>
+              <li>Early Access</li>
+              <li>Premium Resources</li>
+              <li>Cancel Anytime</li>
+            </ul>
+            <a href="membership.html" class="btn btn-gold mem-card-cta">Become A Member</a>
+            <p class="mem-card-note">No commitment. Cancel anytime.</p>
           </div>
+          <div class="mem-card-glow"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 5 — LEARNING JOURNEY -->
-  <section class="journey">
-    <div class="journey-inner">
-      <div class="section-header reveal">
-        <span class="section-label">Your Path</span>
-        <h2 class="section-title">The Learning Journey</h2>
+  <!-- S5 — LEARNING JOURNEY -->
+  <section class="section-wrap" style="background:var(--bg)">
+    <div class="inner">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Your Path</span>
+        <h2 class="display">The Learning Journey</h2>
       </div>
       <div class="journey-timeline">
-        <div class="journey-step reveal">
-          <div class="journey-dot"></div>
-          <div class="journey-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polygon points="5,3 19,12 5,21"/></svg>
-          </div>
-          <span>Watch</span>
+        <div class="j-step reveal">
+          <div class="j-dot"></div>
+          <div class="j-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <span class="j-label">Watch</span>
         </div>
-        <div class="journey-connector reveal"></div>
-        <div class="journey-step reveal">
-          <div class="journey-dot"></div>
-          <div class="journey-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          </div>
-          <span>Read</span>
+        <div class="j-conn reveal"></div>
+        <div class="j-step reveal">
+          <div class="j-dot"></div>
+          <div class="j-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+          <span class="j-label">Read Ebook</span>
         </div>
-        <div class="journey-connector reveal"></div>
-        <div class="journey-step reveal">
-          <div class="journey-dot"></div>
-          <div class="journey-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg>
-          </div>
-          <span>Learn</span>
+        <div class="j-conn reveal"></div>
+        <div class="j-step reveal">
+          <div class="j-dot"></div>
+          <div class="j-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg></div>
+          <span class="j-label">Learn Deeper</span>
         </div>
-        <div class="journey-connector reveal"></div>
-        <div class="journey-step reveal">
-          <div class="journey-dot"></div>
-          <div class="journey-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <span>Join</span>
+        <div class="j-conn reveal"></div>
+        <div class="j-step reveal">
+          <div class="j-dot"></div>
+          <div class="j-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <span class="j-label">Join Membership</span>
         </div>
-        <div class="journey-connector reveal"></div>
-        <div class="journey-step journey-step--final reveal">
-          <div class="journey-dot journey-dot--gold"></div>
-          <div class="journey-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
-          </div>
-          <span>Unlock More</span>
+        <div class="j-conn reveal"></div>
+        <div class="j-step j-step--final reveal">
+          <div class="j-dot j-dot--gold"></div>
+          <div class="j-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+          <span class="j-label">Unlock Everything</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 6 — TRUST / COUNTERS -->
-  <section class="trust">
-    <div class="trust-inner">
+  <!-- S6 — ABOUT CREATOR -->
+  <section class="section-wrap divider-top" style="background:var(--bg2)">
+    <div class="about-home-inner">
+      <div class="reveal-l">
+        <div class="about-avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <span class="eyebrow">The Creator</span>
+        <h2 class="about-home-h2">About The Creator</h2>
+        <p class="about-home-p">Sharing ideas, insights, and resources to help curious minds learn and grow. Every ebook and video is built around one goal — clarity and depth, without the noise.</p>
+        <a href="work-with-me.html" class="btn btn-outline">Work With Me</a>
+      </div>
+      <div class="about-home-visual reveal-r">
+        <div class="about-card-display">
+          <div class="about-quote">"The best ideas are the ones that change how you see — not just what you know."</div>
+          <div class="about-stat-row">
+            <div class="about-stat-item">
+              <div class="about-stat-num">12K+</div>
+              <div class="about-stat-lbl">Readers</div>
+            </div>
+            <div class="about-stat-item">
+              <div class="about-stat-num">3</div>
+              <div class="about-stat-lbl">Ebooks</div>
+            </div>
+            <div class="about-stat-item">
+              <div class="about-stat-num">2.8K</div>
+              <div class="about-stat-lbl">Members</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 — WORK WITH ME PREVIEW -->
+  <section class="section-wrap divider-top" style="background:var(--bg)">
+    <div class="wwm-preview-inner">
+      <div class="wwm-preview-right reveal-l">
+        <div class="wwm-card">
+          <h4>Sponsorships</h4>
+          <p>Brand integrations in content</p>
+        </div>
+        <div class="wwm-card">
+          <h4>Collaborations</h4>
+          <p>Creative partnerships</p>
+        </div>
+        <div class="wwm-card">
+          <h4>Promotions</h4>
+          <p>Product or service features</p>
+        </div>
+        <div class="wwm-card">
+          <h4>Speaking</h4>
+          <p>Media and engagements</p>
+        </div>
+      </div>
+      <div class="reveal-r">
+        <span class="eyebrow">Partnerships</span>
+        <h2 class="wwm-preview-h2">Collaborate<br /><em>With Me</em></h2>
+        <p class="wwm-preview-p">For sponsorships, collaborations, brand deals, and professional opportunities — let's build something meaningful together.</p>
+        <div class="wwm-tags">
+          <span class="wwm-tag">High Engagement</span>
+          <span class="wwm-tag">Trusted Brand</span>
+          <span class="wwm-tag">Quality Production</span>
+        </div>
+        <a href="work-with-me.html" class="btn btn-outline">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- S8 — TRUST COUNTERS -->
+  <section class="section-wrap divider-top" style="background:var(--bg2)">
+    <div class="inner">
+      <div class="sec-head reveal">
+        <span class="eyebrow">By The Numbers</span>
+        <h2 class="display">Growing Every Day</h2>
+      </div>
       <div class="trust-grid">
-        <div class="trust-stat reveal">
-          <div class="trust-number" data-target="12400">0</div>
-          <div class="trust-label">Readers</div>
+        <div class="trust-card reveal">
+          <div class="trust-num" data-target="12400">0</div>
+          <div class="trust-lbl">Readers</div>
         </div>
-        <div class="trust-stat reveal">
-          <div class="trust-number" data-target="34200">0</div>
-          <div class="trust-label">Downloads</div>
+        <div class="trust-card reveal">
+          <div class="trust-num" data-target="34200">0</div>
+          <div class="trust-lbl">Ebook Downloads</div>
         </div>
-        <div class="trust-stat reveal">
-          <div class="trust-number" data-target="2800">0</div>
-          <div class="trust-label">Members</div>
+        <div class="trust-card reveal">
+          <div class="trust-num" data-target="2800">0</div>
+          <div class="trust-lbl">Members</div>
         </div>
-        <div class="trust-stat reveal">
-          <div class="trust-number" data-target="98" data-suffix="%">0</div>
-          <div class="trust-label">Satisfaction</div>
+        <div class="trust-card reveal">
+          <div class="trust-num" data-target="98" data-suffix="%">0</div>
+          <div class="trust-lbl">Community Growth</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 7 — FINAL CTA -->
-  <section class="final-cta">
-    <div class="final-cta-inner reveal">
-      <span class="section-label light">Begin Today</span>
-      <h2 class="final-cta-heading">Start Your Journey</h2>
-      <p class="final-cta-sub">Explore the collection or unlock the complete experience.</p>
-      <div class="final-cta-actions">
-        <a href="#ebooks" class="btn btn-primary">Browse Ebooks</a>
+  <!-- S9 — SUPPORT PREVIEW -->
+  <section class="section-wrap divider-top" style="background:var(--bg)">
+    <div class="support-preview-inner">
+      <div class="reveal-l">
+        <span class="eyebrow">Help Center</span>
+        <h2 class="support-preview-h2">Need Help?</h2>
+        <p class="support-preview-p">Support for ebooks, membership, payments, or access issues. We're here to help quickly and professionally.</p>
+        <a href="support.html" class="btn btn-outline">Visit Support</a>
+      </div>
+      <div class="support-info-card reveal-r">
+        <div class="support-info-row">
+          <span class="support-info-label">Support Email</span>
+          <span class="support-info-val"><a href="mailto:support@yourwebsite.com">support@yourwebsite.com</a></span>
+        </div>
+        <div class="support-info-row">
+          <span class="support-info-label">Response Time</span>
+          <span class="support-info-val">24–48 hours</span>
+        </div>
+        <div class="support-info-row">
+          <span class="support-info-label">Topics Covered</span>
+          <span class="support-info-val">Ebooks · Membership · Payments · Access</span>
+        </div>
+        <a href="support.html" class="btn btn-ghost btn-sm" style="align-self:flex-start">Open a Ticket</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- S10 — FINAL CTA -->
+  <section class="final-cta-wrap section-wrap divider-top">
+    <div class="final-cta-orb"></div>
+    <div class="inner-xs reveal" style="text-align:center;position:relative;">
+      <span class="eyebrow dim">Begin Today</span>
+      <h2 class="final-cta-h2">Start Your Journey Today</h2>
+      <p class="final-cta-p">Begin with ebooks or unlock full membership for complete access to everything Luminary offers.</p>
+      <div class="final-cta-btns">
+        <a href="#ebooks" class="btn btn-white">Browse Ebooks</a>
         <a href="membership.html" class="btn btn-gold">Join Membership</a>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 8 — FOOTER -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
         <a href="index.html" class="footer-logo">Luminary</a>
-        <p>Premium knowledge for curious minds.</p>
+        <p>Premium knowledge and resources for curious, ambitious minds.</p>
       </div>
-      <nav class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="membership.html">Membership</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </nav>
-      <div class="footer-copy">© 2026 Luminary. All rights reserved.</div>
+      <div class="footer-right">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="membership.html">Membership</a>
+          <a href="work-with-me.html">Work With Me</a>
+          <a href="support.html">Support</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Refund Policy</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:support@yourwebsite.com">support@yourwebsite.com</a>
+          <a href="mailto:business@yourwebsite.com">business@yourwebsite.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom" style="padding-left:clamp(1.5rem,5vw,4rem);padding-right:clamp(1.5rem,5vw,4rem)">
+      <span>© 2026 Luminary. All rights reserved.</span>
+      <span>Premium Digital Publishing</span>
     </div>
   </footer>
 
